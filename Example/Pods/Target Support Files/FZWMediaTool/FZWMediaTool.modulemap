@@ -1,0 +1,6 @@
+framework module FZWMediaTool {
+  umbrella header "FZWMediaTool-umbrella.h"
+
+  export *
+  module * { export * }
+}

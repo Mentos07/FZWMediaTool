@@ -21,22 +21,30 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/292017666@qq.com/FZWMediaTool'
+  s.homepage         = 'https://github.com/Mentos07/FZWMediaTool.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '292017666@qq.com' => 'fuzhuowen@3cink.com' }
-  s.source           = { :git => 'https://github.com/292017666@qq.com/FZWMediaTool.git', :tag => s.version.to_s }
+  s.author           = { 'fuzhuowen' => '292017666@qq.com' }
+  s.source           = { :git => 'https://github.com/Mentos07/FZWMediaTool.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'FZWMediaTool/Classes/**/*'
+  s.dependency 'Masonry'
   
   # s.resource_bundles = {
   #   'FZWMediaTool' => ['FZWMediaTool/Assets/*.png']
   # }
-
+  
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.source_files = 'FZWMediaTool/*.{h,m}'
+  # 通用
+  s.subspec 'Utils' do |ss|
+    ss.source_files = 'FZWMediaTool/Utils/*.{h,m}'
+  end
+  # 相机
+  s.subspec 'Camera' do |ss|
+    ss.source_files = 'FZWMediaTool/Camera/*.{h,m}'
+  end
 end

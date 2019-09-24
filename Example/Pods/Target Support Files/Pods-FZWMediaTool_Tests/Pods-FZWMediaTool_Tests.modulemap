@@ -1,0 +1,6 @@
+framework module Pods_FZWMediaTool_Tests {
+  umbrella header "Pods-FZWMediaTool_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

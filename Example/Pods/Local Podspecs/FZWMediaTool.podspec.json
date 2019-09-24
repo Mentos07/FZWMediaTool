@@ -1,0 +1,37 @@
+{
+  "name": "FZWMediaTool",
+  "version": "0.1.0",
+  "summary": "A short description of FZWMediaTool.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/292017666@qq.com/FZWMediaTool",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "292017666@qq.com": "fuzhuowen@3cink.com"
+  },
+  "source": {
+    "git": "https://github.com/292017666@qq.com/FZWMediaTool.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "dependencies": {
+    "Masonry": [
+
+    ]
+  },
+  "source_files": "FZWMediaTool/*.{h,m}",
+  "subspecs": [
+    {
+      "name": "Utils",
+      "source_files": "FZWMediaTool/Utils/*.{h,m}"
+    },
+    {
+      "name": "Camera",
+      "source_files": "FZWMediaTool/Camera/*.{h,m}"
+    }
+  ]
+}

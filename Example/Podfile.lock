@@ -1,0 +1,29 @@
+PODS:
+  - FZWMediaTool (0.1.0):
+    - FZWMediaTool/Camera (= 0.1.0)
+    - FZWMediaTool/Utils (= 0.1.0)
+    - Masonry
+  - FZWMediaTool/Camera (0.1.0):
+    - Masonry
+  - FZWMediaTool/Utils (0.1.0):
+    - Masonry
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - FZWMediaTool (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs:
+    - Masonry
+
+EXTERNAL SOURCES:
+  FZWMediaTool:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FZWMediaTool: 8e6b4917f0341e0a219e1890fd9405352ac4158c
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 71e9352784bd7edd4318bd945690c2a10dce0024
+
+COCOAPODS: 1.7.5
