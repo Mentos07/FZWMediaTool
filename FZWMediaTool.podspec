@@ -30,6 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
   s.dependency 'Masonry'
+  s.dependency 'GPUImage'
   
   # s.resource_bundles = {
   #   'FZWMediaTool' => ['FZWMediaTool/Assets/*.png']

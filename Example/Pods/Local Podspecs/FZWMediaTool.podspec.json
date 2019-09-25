@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "summary": "A short description of FZWMediaTool.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/292017666@qq.com/FZWMediaTool",
+  "homepage": "https://github.com/Mentos07/FZWMediaTool.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "292017666@qq.com": "fuzhuowen@3cink.com"
+    "fuzhuowen": "292017666@qq.com"
   },
   "source": {
-    "git": "https://github.com/292017666@qq.com/FZWMediaTool.git",
+    "git": "https://github.com/Mentos07/FZWMediaTool.git",
     "tag": "0.1.0"
   },
   "platforms": {
@@ -20,6 +20,9 @@
   },
   "dependencies": {
     "Masonry": [
+
+    ],
+    "GPUImage": [
 
     ]
   },

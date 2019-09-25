@@ -7,12 +7,11 @@
 
 #import "FZWMediaTool.h"
 #import "FZWCameraVC.h"
-#import "FZWUtils.h"
 
 @implementation FZWMediaTool
 
+//打开相机
 + (void)openCameraController {
-    NSLog(@"456");
     FZWCameraVC *cameraVC = [FZWCameraVC new];
     [[FZWUtils getRootViewController] presentViewController:cameraVC animated:YES completion:nil];
 }
