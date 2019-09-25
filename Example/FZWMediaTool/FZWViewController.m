@@ -7,7 +7,7 @@
 //
 
 #import "FZWViewController.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 #import "FZWMediaTool.h"
 
 @interface FZWViewController ()
