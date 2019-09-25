@@ -26,15 +26,5 @@
 
     ]
   },
-  "source_files": "FZWMediaTool/*.{h,m}",
-  "subspecs": [
-    {
-      "name": "Utils",
-      "source_files": "FZWMediaTool/Utils/*.{h,m}"
-    },
-    {
-      "name": "Camera",
-      "source_files": "FZWMediaTool/Camera/*.{h,m}"
-    }
-  ]
+  "source_files": "FZWMediaTool/**/*.{h,m}"
 }

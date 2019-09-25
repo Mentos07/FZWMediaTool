@@ -1,13 +1,5 @@
 PODS:
   - FZWMediaTool (0.1.0):
-    - FZWMediaTool/Camera (= 0.1.0)
-    - FZWMediaTool/Utils (= 0.1.0)
-    - GPUImage
-    - Masonry
-  - FZWMediaTool/Camera (0.1.0):
-    - GPUImage
-    - Masonry
-  - FZWMediaTool/Utils (0.1.0):
     - GPUImage
     - Masonry
   - GPUImage (0.1.7)
@@ -26,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FZWMediaTool: 7fb1c2375467a8642d797cbfac2998e5d6bf4c91
+  FZWMediaTool: 948942695d59130b2967fb2c9429d4fe595fca05
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 

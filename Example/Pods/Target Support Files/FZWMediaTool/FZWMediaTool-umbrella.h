@@ -10,10 +10,10 @@
 #endif
 #endif
 
-#import "FZWMediaTool.h"
 #import "FZWCameraCaptureButtonView.h"
 #import "FZWCameraLayerView.h"
 #import "FZWCameraVC.h"
+#import "FZWMediaTool.h"
 #import "FZWMacro.h"
 #import "FZWUtils.h"
 

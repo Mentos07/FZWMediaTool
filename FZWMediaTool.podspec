@@ -39,13 +39,13 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   
-  s.source_files = 'FZWMediaTool/*.{h,m}'
-  # 通用
-  s.subspec 'Utils' do |ss|
-    ss.source_files = 'FZWMediaTool/Utils/*.{h,m}'
-  end
-  # 相机
-  s.subspec 'Camera' do |ss|
-    ss.source_files = 'FZWMediaTool/Camera/*.{h,m}'
-  end
+  s.source_files = 'FZWMediaTool/**/*.{h,m}'
+#  # 通用
+#  s.subspec 'Utils' do |ss|
+#    ss.source_files = 'FZWMediaTool/Utils/*.{h,m}'
+#  end
+#  # 相机
+#  s.subspec 'Camera' do |ss|
+#    ss.source_files = 'FZWMediaTool/Camera/*.{h,m}'
+#  end
 end
