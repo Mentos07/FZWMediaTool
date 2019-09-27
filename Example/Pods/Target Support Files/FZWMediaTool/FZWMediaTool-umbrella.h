@@ -12,6 +12,7 @@
 
 #import "FZWCameraCaptureButtonView.h"
 #import "FZWCameraLayerView.h"
+#import "FZWCameraMenuBarView.h"
 #import "FZWCameraVC.h"
 #import "FZWMediaTool.h"
 #import "FZWMacro.h"

@@ -7,7 +7,6 @@
 
 #import "FZWCameraLayerView.h"
 #import "FZWMediaTool.h"
-#import <GPUImage/GPUImage.h>
 
 @interface FZWCameraLayerView ()
 
@@ -78,13 +77,14 @@
 }
 
 - (void)stopRecording {
+    FZWWeakObj(self);
     dispatch_async(dispatch_get_main_queue(), ^{
         //停止视频采集
         [self.movieWriter finishRecordingWithCompletionHandler:^{//释放资源
-            self.isRecording = YES;
-            [self.filter removeTarget:self.movieWriter];
-            self.cameraDevice.audioEncodingTarget = nil;
-            self.movieWriter = nil;
+            selfWeak.isRecording = NO;
+            [selfWeak.filter removeTarget:self.movieWriter];
+            selfWeak.cameraDevice.audioEncodingTarget = nil;
+            selfWeak.movieWriter = nil;
         }];
     });
 }
@@ -100,8 +100,9 @@
 
 #pragma mark -- 摄像头操作
 
-- (void)rotateCamera {
+- (AVCaptureDevicePosition)rotateCamera {
     [_cameraDevice rotateCamera];
+    return _cameraDevice.cameraPosition;
 }
 
 #pragma mark -- 分辨率
@@ -118,9 +119,11 @@
 - (GPUImageMovieWriter *)movieWriter {
     if (!_movieWriter) {
         //生成文件名
-        NSString *fileName = [NSString stringWithFormat:@"video%d.mp4",arc4random() % 10000000];
+        NSString *fileName = [NSString stringWithFormat:@"video.mp4"];
         //设置写入地址
         NSString *pathToMovie = [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
+        //判断文件是否存在 -- 删除原有文件
+        unlink([pathToMovie UTF8String]);
         _willSaveUrl = [NSURL fileURLWithPath:pathToMovie];
         //初始化写入对象
         _movieWriter = [[GPUImageMovieWriter alloc]initWithMovieURL:_willSaveUrl size:[self getVideoSize]];

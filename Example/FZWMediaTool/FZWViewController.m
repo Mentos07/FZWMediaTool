@@ -36,7 +36,9 @@
 }
 
 - (IBAction)openCameraAction:(UIButton *)sender {
-    [FZWMediaTool openCameraController];
+    [FZWMediaTool openCameraControllerWithCompleteBlock:^(NSURL *fileUrl) {
+        NSLog(@"%@",fileUrl);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

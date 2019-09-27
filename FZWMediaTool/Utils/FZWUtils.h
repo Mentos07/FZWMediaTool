@@ -18,6 +18,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIViewController *)getRootViewController;
 
+/**
+ 获取本地图片资源
+
+ @param fileName 文件名称
+ @return 图片资源
+ */
++ (UIImage *)imageToBundleWithFileName:(NSString *)fileName;
+
 @end
 
 NS_ASSUME_NONNULL_END

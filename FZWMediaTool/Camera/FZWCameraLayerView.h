@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GPUImage/GPUImage.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -49,7 +50,7 @@ typedef NS_ENUM(NSInteger, FZWCameraConfigLen2wid) {
 /**
  切换摄像头方向
  */
-- (void)rotateCamera;
+- (AVCaptureDevicePosition)rotateCamera;
 
 @end
 

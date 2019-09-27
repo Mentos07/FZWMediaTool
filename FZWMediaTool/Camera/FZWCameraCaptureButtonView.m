@@ -7,6 +7,7 @@
 
 #import "FZWCameraCaptureButtonView.h"
 #import <FZWMediaTool/FZWMediaTool.h>
+#import "FZWMediaTool.h"
 
 #define kCircleSize kFZW_Size(50)
 #define kCABasicAnimationKey @"strokeEndAnimation"
@@ -35,9 +36,13 @@
         //运用贝塞尔曲线配合CAShapeLayer
         _layer = [CAShapeLayer layer];
         _layer.fillColor = [UIColor clearColor].CGColor;
-        _layer.strokeColor = [UIColor redColor].CGColor;
+        _layer.strokeColor = kThemeColor.CGColor;
         _layer.lineWidth = 5;
         [self.layer addSublayer:_layer];
+        
+        [_effectView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
         
         [_circleV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self);
@@ -51,11 +56,6 @@
         [self addGestureRecognizer:singleClickRecognize];
     }
     return self;
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    _effectView.frame = self.bounds;
 }
 
 - (void)setIsStart:(BOOL)isStart {
@@ -75,8 +75,7 @@
 #pragma mark -- 单击
 
 - (IBAction)singleClickTap:(UITapGestureRecognizer *)sender {
-    self.isStart = !self.isStart;
-    !_cameraCaptureButtonViewBlock?:_cameraCaptureButtonViewBlock(self.isStart?FZWCameraCaptureButtonViewActionRecord:FZWCameraCaptureButtonViewActionStop);
+    !_cameraCaptureButtonViewBlock?:_cameraCaptureButtonViewBlock(!self.isStart?FZWCameraCaptureButtonViewActionRecord:FZWCameraCaptureButtonViewActionStop);
 }
 
 #pragma mark -- 动画

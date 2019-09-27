@@ -10,6 +10,8 @@
 #import "FZWMacro.h"
 #import "FZWUtils.h"
 
+typedef void(^CompleteBlock)(NSURL *fileUrl);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FZWMediaTool : NSObject
@@ -17,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  打开相机
  */
-+ (void)openCameraController;
++ (void)openCameraControllerWithCompleteBlock:(CompleteBlock)completeBlock;
 
 @end
 

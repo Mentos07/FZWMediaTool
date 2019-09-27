@@ -15,4 +15,11 @@
     return window.rootViewController;
 }
 
+//获取本地图片资源
++ (UIImage *)imageToBundleWithFileName:(NSString *)fileName; {
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *path = [bundle pathForResource:fileName ofType:nil inDirectory:@"FZWMediaTool.bundle"];
+    return [UIImage imageWithContentsOfFile:path];
+}
+
 @end

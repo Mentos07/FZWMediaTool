@@ -11,8 +11,11 @@
 @implementation FZWMediaTool
 
 //打开相机
-+ (void)openCameraController {
++ (void)openCameraControllerWithCompleteBlock:(CompleteBlock)completeBlock {
     FZWCameraVC *cameraVC = [FZWCameraVC new];
+    cameraVC.cameraCompleteBlock = ^(NSURL * _Nonnull fileUrl) {
+        !completeBlock?:completeBlock(fileUrl);
+    };
     [[FZWUtils getRootViewController] presentViewController:cameraVC animated:YES completion:nil];
 }
 

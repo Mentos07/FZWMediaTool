@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FZWMediaTool'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of FZWMediaTool.'
 
 # This description is used to generate tags and improve search results.
@@ -32,20 +32,13 @@ TODO: Add long description of the pod here.
   s.dependency 'Masonry'
   s.dependency 'GPUImage'
   
-  # s.resource_bundles = {
-  #   'FZWMediaTool' => ['FZWMediaTool/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'FZWMediaTool' => ['FZWMediaTool/Assets/*.png']
+  }
   
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   
   s.source_files = 'FZWMediaTool/**/*.{h,m}'
-#  # 通用
-#  s.subspec 'Utils' do |ss|
-#    ss.source_files = 'FZWMediaTool/Utils/*.{h,m}'
-#  end
-#  # 相机
-#  s.subspec 'Camera' do |ss|
-#    ss.source_files = 'FZWMediaTool/Camera/*.{h,m}'
-#  end
+
 end
