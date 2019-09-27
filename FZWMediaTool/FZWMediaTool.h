@@ -10,7 +10,7 @@
 #import "FZWMacro.h"
 #import "FZWUtils.h"
 
-typedef void(^CompleteBlock)(NSURL *fileUrl);
+typedef void(^CompleteBlock)(NSURL *_Nullable fileUrl);
 
 NS_ASSUME_NONNULL_BEGIN
 

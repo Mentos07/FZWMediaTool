@@ -7,7 +7,6 @@
 
 #import "FZWCameraVC.h"
 #import <FZWMediaTool/FZWMediaTool.h>
-#import "FZWCameraLayerView.h"
 #import "FZWCameraCaptureButtonView.h"
 #import <AVKit/AVKit.h>
 

@@ -37,6 +37,7 @@
         
         //图集按钮
         _albumBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        _albumBtn.hidden = YES;
         [_albumBtn setBackgroundImage:[FZWUtils imageToBundleWithFileName:@"fold@3x.png"] forState:UIControlStateNormal];
         [_albumBtn addTarget:self action:@selector(buttonItemAction:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_albumBtn];
