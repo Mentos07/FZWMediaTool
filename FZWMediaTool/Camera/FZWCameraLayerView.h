@@ -33,6 +33,16 @@ typedef NS_ENUM(NSInteger, FZWCameraConfigLen2wid) {
 @property (nonatomic,weak) id<FZWCaptureVideoLayerDelegate> fzw_Delegate;
 
 /**
+ 开始采集
+ */
+- (void)startCameraCapture;
+
+/**
+ 停止采集
+ */
+- (void)stopCameraCapture;
+
+/**
  拍摄照片
  */
 - (void)capturePhoto;

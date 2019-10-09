@@ -58,6 +58,18 @@
     [self bindViewModel];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //开始采集
+    [_cameraLayerView startCameraCapture];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    //停止采集
+    [_cameraLayerView stopCameraCapture];
+}
+
 - (void)dealloc {
     //移除通知
     [[NSNotificationCenter defaultCenter]removeObserver:self];
@@ -143,9 +155,9 @@
 #pragma mark -- <FZWCaptureVideoLayerDelegate>
 
 - (void)recordSucceedNoticeWithFileUrl:(NSURL *)fileUrl {
-//    AVPlayerViewController *vc = [[AVPlayerViewController alloc]init];
-//    vc.player = [[AVPlayer alloc]initWithURL:fileUrl];
-//    [self presentViewController:vc animated:YES completion:nil];
+    AVPlayerViewController *vc = [[AVPlayerViewController alloc]init];
+    vc.player = [[AVPlayer alloc]initWithURL:fileUrl];
+    [self presentViewController:vc animated:YES completion:nil];
     !_cameraCompleteBlock?:_cameraCompleteBlock(fileUrl);
 }
 

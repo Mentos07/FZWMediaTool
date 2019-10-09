@@ -54,7 +54,17 @@
     [_cameraDevice addTarget:_filter];
     
     //启动视频采集
+    [self startCameraCapture];
+}
+
+#pragma mark -- 设备采集操作
+
+- (void)startCameraCapture {
     [_cameraDevice startCameraCapture];
+}
+
+- (void)stopCameraCapture {
+    [_cameraDevice stopCameraCapture];
 }
 
 #pragma mark -- 拍摄照片
