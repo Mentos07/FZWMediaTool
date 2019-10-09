@@ -155,9 +155,9 @@
 #pragma mark -- <FZWCaptureVideoLayerDelegate>
 
 - (void)recordSucceedNoticeWithFileUrl:(NSURL *)fileUrl {
-    AVPlayerViewController *vc = [[AVPlayerViewController alloc]init];
-    vc.player = [[AVPlayer alloc]initWithURL:fileUrl];
-    [self presentViewController:vc animated:YES completion:nil];
+//    AVPlayerViewController *vc = [[AVPlayerViewController alloc]init];
+//    vc.player = [[AVPlayer alloc]initWithURL:fileUrl];
+//    [self presentViewController:vc animated:YES completion:nil];
     !_cameraCompleteBlock?:_cameraCompleteBlock(fileUrl);
 }
 
