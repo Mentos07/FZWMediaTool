@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL isShowAlbum;//是否显示图集按钮
 @property (nonatomic,assign) BOOL isTorchModeOn;//是否启动闪光灯
 @property (nonatomic,copy) void(^albumButtonActionBlck)(void);
+@property (nonatomic,copy) void(^blockButtonActionBlck)(void);
 
 @end
 

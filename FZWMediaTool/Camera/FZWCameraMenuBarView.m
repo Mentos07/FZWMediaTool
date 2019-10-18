@@ -75,7 +75,7 @@
 
 - (IBAction)buttonItemAction:(UIButton *)sender {
     if ([sender isEqual:_backToBtn]) {//关闭
-        [[FZWUtils getRootViewController] dismissViewControllerAnimated:YES completion:nil];
+        !_blockButtonActionBlck?[[FZWUtils getRootViewController] dismissViewControllerAnimated:YES completion:nil]:_blockButtonActionBlck();
     }
     if ([sender isEqual:_flashLampBtn]) {//闪光灯
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
