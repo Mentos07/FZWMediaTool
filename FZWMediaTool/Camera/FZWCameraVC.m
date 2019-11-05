@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     //相机层
     _cameraLayerView = [FZWCameraLayerView new];
     _cameraLayerView.fzw_Delegate = self;
@@ -144,9 +144,9 @@
         AVCaptureDevicePosition position = [self.cameraLayerView rotateCamera];
         self.menuBarView.isShowTorch = position == AVCaptureDevicePositionBack;
         //延迟后开锁
-        double delayInSeconds = 1.0f;
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        double delayInSeconds = 0.1f;
+        dispatch_time_t enabledTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(enabledTime, dispatch_get_main_queue(), ^(void){
             sender.enabled = YES;
         });
     }

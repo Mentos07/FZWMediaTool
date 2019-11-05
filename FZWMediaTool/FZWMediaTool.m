@@ -13,6 +13,7 @@
 //打开相机
 + (void)openCameraControllerWithCompleteBlock:(CompleteBlock)completeBlock {
     FZWCameraVC *cameraVC = [FZWCameraVC new];
+    cameraVC.modalPresentationStyle = 0;
     cameraVC.cameraCompleteBlock = ^(NSURL * _Nonnull fileUrl) {
         !completeBlock?:completeBlock(fileUrl);
     };

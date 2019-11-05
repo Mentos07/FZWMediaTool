@@ -23,8 +23,31 @@
 
 - (instancetype)init {
     if (self == [super init]) {
-        //初始化设备
-        [self initGPUCaptureDevice];
+        //相机权限校验
+        AVAuthorizationStatus statusVideo = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        //麦克风权限校验
+        AVAuthorizationStatus statusAudio = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+        //权限是否被禁用
+        if(statusAudio == AVAuthorizationStatusDenied || statusVideo == AVAuthorizationStatusDenied) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"应用程序无访问相机或麦克风权限, 请在“设置\"-\"隐私”中设置允许访问" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    NSURL *setting = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                    if ([[UIApplication sharedApplication]canOpenURL:setting]) {
+                        [[UIApplication sharedApplication]openURL:setting];
+                    }
+                }];
+                [alert addAction:action];
+                UIViewController *topRootViewController = [[UIApplication sharedApplication] keyWindow].rootViewController;
+                while(topRootViewController.presentedViewController){
+                    topRootViewController = topRootViewController.presentedViewController;
+                }
+                [topRootViewController presentViewController:alert animated:YES completion:nil];
+            });
+        }else{
+            //初始化设备
+            [self initGPUCaptureDevice];
+        }
     }
     return self;
 }
