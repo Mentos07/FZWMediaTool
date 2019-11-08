@@ -29,11 +29,11 @@
     //采集按钮
     _captureButton = [FZWCameraCaptureButtonView new];
     _captureButton.layer.cornerRadius = kFZW_Size(50);
-    [_cameraLayerView addSubview:_captureButton];
+    [self.view addSubview:_captureButton];
 
     //菜单工具
     _menuBarView = [FZWCameraMenuBarView new];
-    [_cameraLayerView addSubview:_menuBarView];
+    [self.view addSubview:_menuBarView];
     
     CGFloat homebar = KFZW_HOMEBAR_HEIGHT;
     [_cameraLayerView mas_makeConstraints:^(MASConstraintMaker *make) {
