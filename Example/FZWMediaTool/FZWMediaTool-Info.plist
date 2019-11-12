@@ -32,6 +32,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>系统相册</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>系统相册</string>
     <key>NSCameraUsageDescription</key>
     <string>相机权限</string>
     <key>NSMicrophoneUsageDescription</key>

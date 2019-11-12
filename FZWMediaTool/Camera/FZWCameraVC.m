@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:1];
 
     //相机层
     _cameraLayerView = [FZWCameraLayerView new];

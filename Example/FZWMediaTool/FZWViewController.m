@@ -37,8 +37,18 @@
 
 - (IBAction)openCameraAction:(UIButton *)sender {
     [FZWMediaTool openCameraControllerWithCompleteBlock:^(NSURL *fileUrl) {
-        NSLog(@"%@",fileUrl);
+        UISaveVideoAtPathToSavedPhotosAlbum([fileUrl path], self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
     }];
+}
+
+//保存视频完成之后的回调
+- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    if (error) {
+        NSLog(@"保存视频失败%@", error.localizedDescription);
+    }
+    else {
+        NSLog(@"保存视频成功");
+    }
 }
 
 - (void)didReceiveMemoryWarning {
