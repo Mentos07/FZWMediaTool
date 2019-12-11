@@ -83,11 +83,17 @@
 #pragma mark -- 设备采集操作
 
 - (void)startCameraCapture {
+    //启动采集
     [_cameraDevice startCameraCapture];
+    //保持屏幕常亮
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
 }
 
 - (void)stopCameraCapture {
+    //停止采集
     [_cameraDevice stopCameraCapture];
+    //取消屏幕常亮
+    [UIApplication sharedApplication].idleTimerDisabled = NO;
 }
 
 #pragma mark -- 拍摄照片

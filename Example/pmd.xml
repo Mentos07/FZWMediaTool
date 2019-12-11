@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="oclint-0.13"><file name="/Users/mentos/work/project/github/FZWMediaTool/Example/build/derivedData/Build/Products/Debug-iphonesimulator/GPUImage/GPUImage.framework/Headers/GPUImageContext.h">
+<violation begincolumn="40" endcolumn="0" beginline="13" endline="0" priority="2" rule="compiler warning" ruleset="clang" >
+'EAGLContext' is deprecated: first deprecated in iOS 12.0 - OpenGLES API deprecated. (Define GLES_SILENCE_DEPRECATION to silence these warnings)
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraMenuBarView.m">
+<violation begincolumn="34" endcolumn="0" beginline="50" endline="0" priority="2" rule="compiler warning" ruleset="clang" >
+'statusBarFrame' is deprecated: first deprecated in iOS 13.0 - Use the statusBarManager property of the window scene instead.
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraMenuBarView.m">
+<violation begincolumn="42" endcolumn="0" beginline="102" endline="0" priority="2" rule="compiler warning" ruleset="clang" >
+'statusBarFrame' is deprecated: first deprecated in iOS 13.0 - Use the statusBarManager property of the window scene instead.
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraVC.m">
+<violation begincolumn="23" endcolumn="0" beginline="40" endline="0" priority="2" rule="compiler warning" ruleset="clang" >
+'statusBarFrame' is deprecated: first deprecated in iOS 13.0 - Use the statusBarManager property of the window scene instead.
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraLayerView.m">
+<violation begincolumn="59" endcolumn="0" beginline="37" endline="0" priority="2" rule="compiler warning" ruleset="clang" >
+'openURL:' is deprecated: first deprecated in iOS 10.0
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraLayerView.m">
+<violation begincolumn="94" endcolumn="0" beginline="41" endline="0" priority="2" rule="compiler warning" ruleset="clang" >
+'keyWindow' is deprecated: first deprecated in iOS 13.0 - Should not be used for applications that support multiple scenes as it returns a key window across all connected scenes
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraMenuBarView.m">
+<violation begincolumn="5" endcolumn="5" beginline="20" endline="70" priority="5" rule="prefer early exits and continue" ruleset="convention" >
+Use early exit/continue to simplify code and reduce indentation
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraMenuBarView.m">
+<violation begincolumn="1" endcolumn="1" beginline="19" endline="72" priority="5" rule="long method" ruleset="size" >
+Method with 54 lines exceeds limit of 50
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraMenuBarView.m">
+<violation begincolumn="9" endcolumn="10" beginline="78" endline="78" priority="5" rule="inverted logic" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraCaptureButtonView.m">
+<violation begincolumn="5" endcolumn="5" beginline="22" endline="57" priority="5" rule="prefer early exits and continue" ruleset="convention" >
+Use early exit/continue to simplify code and reduce indentation
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraCaptureButtonView.m">
+<violation begincolumn="67" endcolumn="73" beginline="78" endline="78" priority="5" rule="inverted logic" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraVC.m">
+<violation begincolumn="9" endcolumn="9" beginline="90" endline="98" priority="5" rule="unnecessary default statement in covered switch statement" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraVC.m">
+<violation begincolumn="9" endcolumn="9" beginline="90" endline="98" priority="3" rule="missing break in switch statement" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraVC.m">
+<violation begincolumn="9" endcolumn="9" beginline="90" endline="98" priority="5" rule="too few branches in switch statement" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraLayerView.m">
+<violation begincolumn="5" endcolumn="5" beginline="25" endline="51" priority="5" rule="prefer early exits and continue" ruleset="convention" >
+Use early exit/continue to simplify code and reduce indentation
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraLayerView.m">
+<violation begincolumn="5" endcolumn="5" beginline="153" endline="178" priority="5" rule="prefer early exits and continue" ruleset="convention" >
+Use early exit/continue to simplify code and reduce indentation
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraLayerView.m">
+<violation begincolumn="1" endcolumn="244" beginline="33" endline="33" priority="5" rule="long line" ruleset="size" >
+Line with 244 characters exceeds limit of 200
+</violation>
+</file>
+
+<file name="/Users/mentos/work/project/github/FZWMediaTool/FZWMediaTool/Camera/FZWCameraLayerView.m">
+<violation begincolumn="17" endcolumn="105" beginline="41" endline="41" priority="5" rule="long variable name" ruleset="naming" >
+Length of variable name `topRootViewController` is 21, which is longer than the threshold of 20
+</violation>
+</file>
+
+</pmd>

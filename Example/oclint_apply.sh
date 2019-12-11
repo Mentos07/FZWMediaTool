@@ -116,6 +116,6 @@ myworkspace="FZWMediaTool.xcworkspace"
 # 替换scheme的名字
 myscheme="FZWMediaTool"
 # 输出方式 xcode/pmd
-reportType="html"
+reportType="pmd"
 
 oclintForProject ${myworkspace} ${myscheme} ${reportType}

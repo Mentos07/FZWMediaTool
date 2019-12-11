@@ -62,12 +62,16 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    //闪光灯状态
+    _menuBarView.isTorchModeOn = NO;
     //开始采集
     [_cameraLayerView startCameraCapture];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    //保持屏幕常亮
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
     //停止采集
     [_cameraLayerView stopCameraCapture];
 }
@@ -142,6 +146,8 @@
     if (!_cameraLayerView.isRecording) {//是否静默状态
         //关闭交互
         sender.enabled = NO;
+        //闪光灯状态
+        _menuBarView.isTorchModeOn = NO;
         //切换摄像头
         AVCaptureDevicePosition position = [self.cameraLayerView rotateCamera];
         self.menuBarView.isShowTorch = position == AVCaptureDevicePositionBack;
