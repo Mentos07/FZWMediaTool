@@ -23,8 +23,8 @@
 #define KFZW_STATUS_AND_NAVIGATION_HEIGHT ((KFZW_STATUS_BAR_HEIGHT) + (KFZW_NAVIGATION_BAR_HEIGHT))
 
 #define KFZW_Min KFZW_SCREEN_HEIGHT<KFZW_SCREEN_WIDTH?KFZW_SCREEN_HEIGHT:KFZW_SCREEN_WIDTH
-#define KFZW_SizeScale (KFZW_Min/375.0f)
-#define kFZW_Size(value) value * KFZW_SizeScale
+#define KFZW_SizeScale (KFZW_SCREEN_WIDTH <= 320 ? 1.0f : (KFZW_SCREEN_WIDTH <= 375 ? 1.1f : 1.15f))
+#define kFZW_Size(value)value * KFZW_SizeScale
 #define kFZW_Font(value) [UIFont systemFontOfSize:value * KFZW_SizeScale]
 
 

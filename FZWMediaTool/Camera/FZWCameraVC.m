@@ -64,6 +64,8 @@
     [super viewWillAppear:animated];
     //闪光灯状态
     _menuBarView.isTorchModeOn = NO;
+    //保持屏幕常亮
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
     //开始采集
     [_cameraLayerView startCameraCapture];
 }
@@ -71,7 +73,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     //保持屏幕常亮
-    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    [UIApplication sharedApplication].idleTimerDisabled = NO;
     //停止采集
     [_cameraLayerView stopCameraCapture];
 }
