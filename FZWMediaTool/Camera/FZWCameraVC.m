@@ -9,10 +9,13 @@
 #import <FZWMediaTool/FZWMediaTool.h>
 #import "FZWCameraCaptureButtonView.h"
 #import <AVKit/AVKit.h>
+#import <CoreTelephony/CTCallCenter.h>
+#import <CoreTelephony/CTCall.h>
 
 @interface FZWCameraVC () <FZWCaptureVideoLayerDelegate>
 
 @property (nonatomic,strong) FZWCameraCaptureButtonView *captureButton;//采集按钮
+@property (nonatomic,strong) CTCallCenter* callCenter;//来电通知
 
 @end
 
@@ -91,6 +94,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(applicationWillEnterBackgroundNotice)
                                                  name:UIApplicationDidEnterBackgroundNotification object:nil];
+    //注册来电监听通知
+    [self initCallCenter];
     //采集按钮
     [_captureButton setCameraCaptureButtonViewBlock:^(FZWCameraCaptureButtonViewAction action) {
         switch (action) {
@@ -103,6 +108,18 @@
                 break;
         }
     }];
+}
+
+#pragma mark -- 监听来电通知
+
+- (void)initCallCenter {
+    _callCenter = [[CTCallCenter alloc] init];
+    FZWWeakObj(self);
+    _callCenter.callEventHandler = ^(CTCall* call) {
+      dispatch_async(dispatch_get_main_queue(), ^{
+          [selfWeak applicationWillEnterBackgroundNotice];
+      });
+    };
 }
 
 #pragma mark -- NSNotificationCenter
